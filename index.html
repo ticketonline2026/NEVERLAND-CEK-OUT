@@ -1017,23 +1017,29 @@ emailjs.send(
 'service_12xh38u',
 'template_i72fjnk',
 {
-user_name: document.getElementById('nama').value,
-user_email: document.getElementById('email').value,
-invoice_id: invoiceNumber,
-ticket_name: ticketText,
-ticket_qty: document.getElementById('jumlah').value,
-payment_total: 'Rp' + total.toLocaleString('id-ID')
+email: document.getElementById('email').value,
+nama: document.getElementById('nama').value,
+invoice: invoiceNumber,
+tiket: ticketText,
+jumlah: document.getElementById('jumlah').value,
+total: 'Rp' + total.toLocaleString('id-ID')
 })
-.then(function(){
-console.log('EMAIL BERHASIL');
+.then(function(response){
+
+console.log('EMAIL BERHASIL', response);
+
 })
 .catch(function(error){
-console.error(error);
+
+console.error('EMAIL GAGAL', error);
+
+alert(
+'Gagal mengirim email. Silakan cek Template EmailJS.'
+);
+
 });
 
 }
-
-</script>
 
 </body>
 </html>
