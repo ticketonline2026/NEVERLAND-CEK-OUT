@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEVERLAND PROJECT ID</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#111;
+}
+
+/* HEADER */
+
+.header{
+height:85px;
+background:#0038d9;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 30px;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 5px 25px rgba(0,0,0,.15);
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+.logo-text{
+color:white;
+font-size:26px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.menu-btn{
+width:45px;
+height:45px;
+border-radius:50%;
+background:rgba(255,255,255,.15);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:20px;
+font-weight:700;
+}
+
+/* BANNER */
+
+.banner{
+width:100%;
+height:200px;
+overflow:hidden;
+}
+
+.banner img{
+width:100%;
+height:80%;
+object-fit:cover;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1400px;
+margin:auto;
+padding:25px;
+}
+
+/* STEP */
+
+.steps{
+display:flex;
+gap:12px;
+margin-bottom:25px;
+flex-wrap:wrap;
+}
+
+.step{
+flex:1;
+min-width:120px;
+background:white;
+padding:14px;
+border-radius:14px;
+font-weight:700;
+text-align:center;
+border:2px solid #e5e5e5;
+}
+
+.step.active{
+background:#0038d9;
+color:white;
+border-color:#0038d9;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr 350px;
+gap:20px;
+align-items:start;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:24px;
+padding:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.card-title{
+font-size:22px;
+font-weight:800;
+margin-bottom:20px;
+color:#0038d9;
+}
+
+/* INPUT */
+
+.input-group{
+margin-bottom:18px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+.input-group input,
+.input-group select{
+width:100%;
+height:55px;
+border:1px solid #ddd;
+border-radius:14px;
+padding:0 16px;
+font-size:15px;
+outline:none;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+border-color:#0038d9;
+}
+
+/* SUMMARY */
+
+.summary-line{
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+font-size:15px;
+}
+
+.total{
+font-size:32px;
+font-weight:900;
+color:#0038d9;
+margin-top:18px;
+}
+
+/* BUTTON */
+
+.btn{
+width:100%;
+height:58px;
+border:none;
+border-radius:16px;
+background:#0038d9;
+color:white;
+font-size:17px;
+font-weight:800;
+cursor:pointer;
+transition:.3s;
+margin-top:20px;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* PAYMENT PAGE */
+
+.payment-page{
+display:none;
+max-width:850px;
+margin:40px auto;
+background:#fff;
+padding:30px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.payment-head{
+text-align:center;
+margin-bottom:25px;
+}
+
+.payment-head img{
+width:90px;
+margin-bottom:15px;
+}
+
+.payment-head h2{
+font-size:40px;
+font-weight:900;
+color:#0038d9;
+}
+
+.payment-head p{
+color:#666;
+font-weight:500;
+}
+
+.timer{
+font-size:60px;
+font-weight:900;
+text-align:center;
+color:#ff3b30;
+margin-bottom:25px;
+}
+
+.qris-box{
+background:#fafafa;
+border-radius:25px;
+padding:25px;
+text-align:center;
+margin-bottom:25px;
+border:2px dashed #ddd;
+}
+
+.qris-box img{
+width:100%;
+max-width:320px;
+}
+
+.payment-total{
+background:#0038d9;
+color:white;
+padding:20px;
+border-radius:18px;
+font-size:28px;
+font-weight:900;
+text-align:center;
+margin-bottom:20px;
+}
+
+.upload-box{
+background:#fafafa;
+padding:25px;
+border-radius:18px;
+border:2px dashed #ccc;
+margin-bottom:20px;
+}
+
+.upload-box input{
+width:100%;
+margin-top:10px;
+}
+
+.check-area{
+display:flex;
+gap:10px;
+align-items:flex-start;
+margin-bottom:20px;
+}
+
+.payment-btn{
+width:100%;
+height:65px;
+border:none;
+border-radius:18px;
+background:#00c853;
+color:white;
+font-size:18px;
+font-weight:900;
+cursor:pointer;
+}
+
+/* LOADING */
+
+.loading-page{
+display:none;
+position:fixed;
+inset:0;
+background:white;
+z-index:99999;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.loader{
+width:90px;
+height:90px;
+border:8px solid #eee;
+border-top:8px solid #0038d9;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:25px;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+/* SUCCESS */
+
+.success-page{
+display:none;
+min-height:100vh;
+background:white;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:30px;
+}
+
+.success-icon{
+width:150px;
+height:150px;
+border-radius:50%;
+background:#e9fff1;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:80px;
+color:#00c853;
+margin-bottom:25px;
+}
+
+.success-page h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.success-page p{
+font-size:18px;
+color:#666;
+margin-bottom:25px;
+max-width:600px;
+}
+
+.success-ticket{
+background:#0038d9;
+color:white;
+padding:25px;
+border-radius:20px;
+max-width:500px;
+width:100%;
+margin-bottom:25px;
+}
+
+.success-ticket h3{
+margin-bottom:15px;
+}
+
+.success-ticket div{
+margin-bottom:8px;
+}
+
+.home-btn{
+padding:16px 35px;
+background:#0038d9;
+color:white;
+text-decoration:none;
+border-radius:14px;
+font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.banner{
+height:250px;
+}
+
+}
+
+@media(max-width:700px){
+
+.payment-head h2{
+font-size:30px;
+}
+
+.timer{
+font-size:42px;
+}
+
+.total{
+font-size:26px;
+}
+
+.success-page h1{
+font-size:32px;
+}
+
+}
+
+</style>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="logo-area">
+<img src="logo-poliponi.png" alt="POLIPONI">
+<div class="logo-text">POLIPONI 2026</div>
+</div>
+
+<div class="menu-btn">
+☰
+</div>
+
+</div>
+
+<!-- BANNER -->
+
+<div class="banner">
+<img src="banner-neverland.png" alt="Banner POLIPONI">
+</div>
+
+<!-- MAIN PAGE -->
+
+<div class="container" id="mainPage">
+
+<div class="steps">
+<div class="step active">1. Tiket</div>
+<div class="step active">2. Data</div>
+<div class="step active">3. Pembayaran</div>
+<div class="step active">4. Konfirmasi</div>
+</div>
+
+<div class="grid">
+
+<!-- DATA PEMBELI -->
+
+<div class="card">
+
+<div class="card-title">
+Data Pembeli
+</div>
+
+<div class="input-group">
+<label>Nama Lengkap *</label>
+<input type="text" id="nama" required>
+</div>
+
+<div class="input-group">
+<label>Jenis Identitas *</label>
+<select id="jenisIdentitas" required>
+<option value="">Pilih Identitas</option>
+<option>KTP</option>
+<option>SIM</option>
+<option>PASPOR</option>
+<option>KARTU PELAJAR</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Nomor Identitas *</label>
+<input type="text" id="nomorIdentitas" required>
+</div>
+
+<div class="input-group">
+<label>Email *</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="input-group">
+<label>Nomor WhatsApp *</label>
+<input type="tel" id="wa" required>
+</div>
+
+</div>
+
+<!-- TIKET -->
+
+<div class="card">
+
+<div class="card-title">
+Pembelian Tiket
+</div>
+
+<div class="input-group">
+<label>Kategori Tiket *</label>
+<select id="ticket" onchange="updateTotal()" required>
+
+<option value="">
+Pilih Tiket
+</option>
+
+
+<option value="140000">
+PRESALE FESTIVAL - Rp140.000
+</option>
+
+<option value="100000">
+EARLY BIRD FESTIVAL - Rp100.000
+</option>
+
+<option value="150000">
+EARLY BIRD VIP - Rp150.000
+</option>
+
+<option value="200000">
+Pre-sale VIP - Rp200.000
+</option>
+
+<option value="250000">
+Pre-sale VIP 2- Rp250.000
+</option>
+
+</select>
+</div>
+
+<div class="input-group">
+<label>Jumlah Tiket *</label>
+
+<select id="jumlah" onchange="updateTotal()" required>
+
+<option value="">
+Pilih Jumlah
+</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<div class="card-title">
+Ringkasan Pembelian
+</div>
+
+<div class="summary-line">
+<span>Event</span>
+<span>POLIPONI BALI 2026</span>
+</div>
+
+<div class="summary-line">
+<span>Tiket</span>
+<span id="sumTicket">-</span>
+</div>
+
+<div class="summary-line">
+<span>Jumlah</span>
+<span id="sumJumlah">0</span>
+</div>
+
+<div class="summary-line">
+<span>Biaya Admin</span>
+<span>Rp10.000</span>
+</div>
+
+<div class="total" id="totalBayar">
+Rp0
+</div>
+
+<button class="btn" onclick="nextPage()">
+LANJUT PEMBAYARAN
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PAYMENT PAGE -->
+
+<div class="payment-page" id="paymentPage">
+
+<div class="payment-head">
+
+<img src="logo-neverland.png">
+
+<h2>
+QRIS PAYMENT
+</h2>
+
+<p>
+POLIPONI BALI 2026
+</p>
+
+</div>
+
+<div class="timer" id="timer">
+03:00
+</div>
+
+<div class="qris-box">
+
+<img src="qris-neverland.png">
+
+</div>
+
+<div class="payment-total" id="paymentTotal">
+Rp0
+</div>
+
+<div class="upload-box">
+
+<label>
+Upload Bukti Pembayaran
+</label>
+
+<input
+type="file"
+id="bukti"
+accept="image/*">
+
+</div>
+
+<div class="check-area">
+
+<input type="checkbox" id="confirmCheck">
+
+<label>
+Saya memastikan pembayaran sudah dilakukan sesuai nominal dan data pembelian benar.
+</label>
+
+</div>
+
+<button
+class="payment-btn"
+onclick="processPayment()">
+
+KONFIRMASI PEMBAYARAN
+
+</button>
+
+</div>
+
+<!-- LOADING -->
+
+<div class="loading-page" id="loadingPage">
+
+<div class="loader"></div>
+
+<h2>
+Sedang Memproses...
+</h2>
+
+<p>
+Mohon tunggu sebentar
+</p>
+
+</div>
+
+<!-- SUCCESS PAGE -->
+
+<div class="success-page" id="successPage">
+
+<div class="success-icon">
+✓
+</div>
+
+<h1>
+Pembayaran Berhasil
+</h1>
+
+<p>
+Terima kasih telah melakukan pembelian tiket POLIPONI BALI 2026.
+E-mail konfirmasi telah dikirim ke alamat email Anda.
+</p>
+
+<div class="success-ticket">
+
+<h3>
+E-TICKET
+</h3>
+
+<div>
+Invoice :
+<b id="invoiceSuccess"></b>
+</div>
+
+<div>
+Nama :
+<b id="namaSuccess"></b>
+</div>
+
+<div>
+Kategori :
+<b id="ticketSuccess"></b>
+</div>
+
+<div>
+Jumlah :
+<b id="jumlahSuccess"></b>
+</div>
+
+<div>
+Total :
+<b id="totalSuccess"></b>
+</div>
+
+</div>
+
+<a
+href="#"
+class="home-btn">
+
+SELESAI
+
+</a>
+
+</div>
+<!-- EMAILJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+    publicKey: "rpBA93282IeRQt3Si"
+});
+
+let total = 0;
+
+let invoiceNumber = '';
+
+/* HITUNG TOTAL */
+
+function updateTotal(){
+
+const ticket = document.getElementById('ticket');
+const jumlah = document.getElementById('jumlah');
+
+const ticketText =
+ticket.options[ticket.selectedIndex]?.text || '-';
+
+const harga =
+parseInt(ticket.value || 0);
+
+const qty =
+parseInt(jumlah.value || 0);
+
+total = (harga * qty) + 10000;
+
+document.getElementById('sumTicket').innerText =
+ticketText;
+
+document.getElementById('sumJumlah').innerText =
+qty;
+
+document.getElementById('totalBayar').innerText =
+'Rp' + total.toLocaleString('id-ID');
+
+document.getElementById('paymentTotal').innerText =
+'Rp' + total.toLocaleString('id-ID');
+
+}
+
+/* KE HALAMAN PEMBAYARAN */
+
+function nextPage(){
+
+const required =
+document.querySelectorAll(
+'input[required], select[required]'
+);
+
+for(let input of required){
+
+if(!input.value){
+
+alert(
+'Lengkapi seluruh data terlebih dahulu'
+);
+
+input.focus();
+
+return;
+
+}
+
+}
+
+document.getElementById(
+'mainPage'
+).style.display='none';
+
+document.getElementById(
+'paymentPage'
+).style.display='block';
+
+window.scrollTo(0,0);
+
+startTimer();
+
+}
+
+/* COUNTDOWN 3 MENIT */
+
+let duration = 180;
+
+let timerStarted = false;
+
+function startTimer(){
+
+if(timerStarted) return;
+
+timerStarted = true;
+
+const timer =
+document.getElementById('timer');
+
+const interval = setInterval(()=>{
+
+let minutes =
+Math.floor(duration / 60);
+
+let seconds =
+duration % 60;
+
+seconds =
+seconds < 10
+? '0' + seconds
+: seconds;
+
+timer.innerHTML =
+minutes + ':' + seconds;
+
+duration--;
+
+if(duration < 0){
+
+clearInterval(interval);
+
+timer.innerHTML =
+'EXPIRED';
+
+alert(
+'Waktu pembayaran habis.'
+);
+
+}
+
+},1000);
+
+}
+
+/* PEMBAYARAN */
+
+function processPayment(){
+
+const bukti =
+document.getElementById('bukti').value;
+
+const check =
+document.getElementById(
+'confirmCheck'
+).checked;
+
+if(!bukti){
+
+alert(
+'Upload bukti pembayaran terlebih dahulu'
+);
+
+return;
+
+}
+
+if(!check){
+
+alert(
+'Checklist persetujuan terlebih dahulu'
+);
+
+return;
+
+}
+
+/* INVOICE */
+
+invoiceNumber =
+'POLI-' +
+Math.floor(
+100000 +
+Math.random() * 900000
+);
+
+/* LOADING */
+
+document.getElementById(
+'paymentPage'
+).style.display='none';
+
+document.getElementById(
+'loadingPage'
+).style.display='flex';
+
+/* KIRIM EMAIL */
+
+sendEmail();
+
+/* DELAY 60 DETIK */
+
+setTimeout(()=>{
+
+document.getElementById(
+'loadingPage'
+).style.display='none';
+
+document.getElementById(
+'successPage'
+).style.display='flex';
+
+/* DATA SUCCESS */
+
+document.getElementById(
+'invoiceSuccess'
+).innerText =
+invoiceNumber;
+
+document.getElementById(
+'namaSuccess'
+).innerText =
+document.getElementById(
+'nama'
+).value;
+
+document.getElementById(
+'ticketSuccess'
+).innerText =
+document.getElementById(
+'ticket'
+).options[
+document.getElementById(
+'ticket'
+).selectedIndex
+].text;
+
+document.getElementById(
+'jumlahSuccess'
+).innerText =
+document.getElementById(
+'jumlah'
+).value;
+
+document.getElementById(
+'totalSuccess'
+).innerText =
+'Rp' +
+total.toLocaleString('id-ID');
+
+window.scrollTo(0,0);
+
+},60000);
+
+}
+
+/* EMAILJS */
+
+function sendEmail(){
+
+const ticketText =
+document.getElementById(
+'ticket'
+).options[
+document.getElementById(
+'ticket'
+).selectedIndex
+].text;
+
+emailjs.send(
+
+'service_12xh38u',
+
+'template_i72fjnk',
+
+{
+email:
+document.getElementById(
+'email'
+).value,
+
+nama:
+document.getElementById(
+'nama'
+).value,
+
+invoice:
+invoiceNumber,
+
+tiket:
+ticketText,
+
+jumlah:
+document.getElementById(
+'jumlah'
+).value,
+
+total:
+'Rp' +
+total.toLocaleString('id-ID')
+
+}
+
+)
+
+.then(function(){
+
+console.log(
+'Email berhasil dikirim'
+);
+
+})
+
+.catch(function(error){
+
+console.error(
+'Email gagal dikirim',
+error
+);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
