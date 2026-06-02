@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NEVERLAND PROJECT ID</title>
+<title>NEVERLAND</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -453,7 +453,7 @@ font-size:32px;
 <!-- BANNER -->
 
 <div class="banner">
-<img src="banner-neverland.png" alt="Banner POLIPONI">
+<img src="banner-neverland .png" alt="Banner POLIPONI">
 </div>
 
 <!-- MAIN PAGE -->
@@ -526,25 +526,24 @@ Pembelian Tiket
 Pilih Tiket
 </option>
 
-
 <option value="140000">
-PRESALE FESTIVAL - Rp140.000
+Presale-FESTIVAL Rp140.000
 </option>
 
 <option value="100000">
-EARLY BIRD FESTIVAL - Rp100.000
+EARLY BIRD-FESTIVAL Rp100.000
 </option>
 
 <option value="150000">
-EARLY BIRD VIP - Rp150.000
+EARLY BIRD-VIP Rp150.000
 </option>
 
 <option value="200000">
-Pre-sale VIP - Rp200.000
+Presale - VIP  Rp200.000
 </option>
 
 <option value="250000">
-Pre-sale VIP 2- Rp250.000
+Pre-sale 2 - VIP  Rp250.000
 </option>
 
 </select>
@@ -624,14 +623,14 @@ LANJUT PEMBAYARAN
 
 <div class="payment-head">
 
-<img src="logo-neverland.png">
+<img src="logo-neverla.png">
 
 <h2>
 QRIS PAYMENT
 </h2>
 
 <p>
-NEVERLAND PROJECT ID
+Neverland Project Id
 </p>
 
 </div>
@@ -712,7 +711,7 @@ Pembayaran Berhasil
 </h1>
 
 <p>
-Terima kasih telah melakukan pembelian tiket NEVERLAND PROJECT ID.
+Terima kasih telah melakukan pembelian tiket Neverland Project Id
 E-mail konfirmasi telah dikirim ke alamat email Anda.
 </p>
 
@@ -765,7 +764,7 @@ SELESAI
 <script>
 
 emailjs.init({
-    publicKey: "4Lgt4FRXjjXutvKe"
+    publicKey: "UK9f9aCFR9Z6Lr8Fa"
 });
 
 let total = 0;
@@ -1009,37 +1008,70 @@ window.scrollTo(0,0);
 function sendEmail(){
 
 const ticketText =
-document.getElementById('ticket').options[
-document.getElementById('ticket').selectedIndex
+document.getElementById(
+'ticket'
+).options[
+document.getElementById(
+'ticket'
+).selectedIndex
 ].text;
 
 emailjs.send(
-'service_12xh38u',
-'template_i72fjnk',
+
+'service_q4nujvm',
+
+'template_dq5jojk',
+
 {
-email: document.getElementById('email').value,
-nama: document.getElementById('nama').value,
-invoice: invoiceNumber,
-tiket: ticketText,
-jumlah: document.getElementById('jumlah').value,
-total: 'Rp' + total.toLocaleString('id-ID')
-})
-.then(function(response){
+email:
+document.getElementById(
+'email'
+).value,
 
-console.log('EMAIL BERHASIL', response);
+nama:
+document.getElementById(
+'nama'
+).value,
+
+invoice:
+invoiceNumber,
+
+tiket:
+ticketText,
+
+jumlah:
+document.getElementById(
+'jumlah'
+).value,
+
+total:
+'Rp' +
+total.toLocaleString('id-ID')
+
+}
+
+)
+
+.then(function(){
+
+console.log(
+'Email berhasil dikirim'
+);
 
 })
+
 .catch(function(error){
 
-console.log(error);
-
-alert(
-'ERROR: ' + JSON.stringify(error)
+console.error(
+'Email gagal dikirim',
+error
 );
 
 });
 
-} 
+}
+
 </script>
+
 </body>
 </html>
