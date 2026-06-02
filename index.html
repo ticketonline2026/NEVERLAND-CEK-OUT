@@ -1031,10 +1031,10 @@ console.log('EMAIL BERHASIL', response);
 })
 .catch(function(error){
 
-console.error('EMAIL GAGAL', error);
+console.log(error);
 
 alert(
-'Gagal mengirim email. Silakan cek Template EmailJS.'
+'ERROR: ' + JSON.stringify(error)
 );
 
 });
