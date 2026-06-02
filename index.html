@@ -1009,65 +1009,26 @@ window.scrollTo(0,0);
 function sendEmail(){
 
 const ticketText =
-document.getElementById(
-'ticket'
-).options[
-document.getElementById(
-'ticket'
-).selectedIndex
+document.getElementById('ticket').options[
+document.getElementById('ticket').selectedIndex
 ].text;
 
 emailjs.send(
-
 'service_12xh38u',
-
 'template_i72fjnk',
-
 {
-email:
-document.getElementById(
-'email'
-).value,
-
-nama:
-document.getElementById(
-'nama'
-).value,
-
-invoice:
-invoiceNumber,
-
-tiket:
-ticketText,
-
-jumlah:
-document.getElementById(
-'jumlah'
-).value,
-
-total:
-'Rp' +
-total.toLocaleString('id-ID')
-
-}
-
-)
-
-.then(function(){
-
-console.log(
-'Email berhasil dikirim'
-);
-
+user_name: document.getElementById('nama').value,
+user_email: document.getElementById('email').value,
+invoice_id: invoiceNumber,
+ticket_name: ticketText,
+ticket_qty: document.getElementById('jumlah').value,
+payment_total: 'Rp' + total.toLocaleString('id-ID')
 })
-
+.then(function(){
+console.log('EMAIL BERHASIL');
+})
 .catch(function(error){
-
-console.error(
-'Email gagal dikirim',
-error
-);
-
+console.error(error);
 });
 
 }
